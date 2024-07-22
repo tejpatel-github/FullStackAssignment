@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header'); -%>
+
+    <body>
+        <%- include('layouts/navbar'); -%>
+            <main>
+                <div id="gupdate">
+                    <div class="container-fluid justify-content-center">
+                        <h1>G Page</h1>
+                    </div>
+                    <form action="/g/update" method="post" class="form_grid">
+                        <h4>Personal Details</h4>
+                        <h4></h4>
+                        <p>First Name:</p>
+                        <p>
+                            <%= user.firstName %>
+                        </p>
+                        <p>Last Name:</p>
+                        <p>
+                            <%= user.lastName %>
+                        </p>
+                        <p>License Number:</p>
+                        <p>
+                            <%= user.licenseNumber %>
+                        </p>
+                        <p>Age:</p>
+                        <p>
+                            <%= user.age %>
+                        </p>
+
+                        <h4>Car Details</h4>
+                        <h4></h4>
+                        <label for="make">Car Make:</label>
+                        <input type="text" id="make" name="make" value="<%= user.carDetails.make %>">
+                        <label for="model">Car Model:</label>
+                        <input type="text" id="model" name="model" value="<%= user.carDetails.model %>">
+                        <label for="year">Car Year:</label>
+                        <input type="text" id="year" name="year" value="<%= user.carDetails.year %>">
+                        <label for="platNumber">Plate Number:</label>
+                        <input type="text" id="platNumber" name="platNumber"
+                            value="<%= user.carDetails.platNumber %>">
+                        <input type="hidden" name="licenseNumber" value="<%= user.licenseNumber %>">
+                        <button type="submit" class="btn btn-primary">Update</button>
+
+
+                    </form>
+                    <!-- </div> -->
+                </div>
+            </main>
+    </body>
+
+</html>
