@@ -8,9 +8,21 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-link " aria-current="page" href="/">Dashboard</a>
-                <a class="nav-link" href="/gtest">G Test</a>
-                <a class="nav-link" href="/g2test">G2 Test</a>
-                <a class="nav-link" href="/login">Login</a>
+                <% if(loggedIn) { %>
+                    <% if(userType === "Driver") { %>
+                        <a class="nav-link" href="/gtest">G Test</a>
+                        <a class="nav-link" href="/g2test">G2 Test</a>
+                    <% } %>
+                    <% if(userType === "Admin") { %>
+                        <a class="nav-link" href="/appointment">Appointment</a>
+                    <% } %>
+                    <a class="nav-link" href="/logout">Logout</a>
+                <% } %>
+                <% if(!loggedIn) { %>
+                    <a class="nav-link" href="/login">Login</a>
+                <% } %>
+
+
             </div>
         </div>
     </div>

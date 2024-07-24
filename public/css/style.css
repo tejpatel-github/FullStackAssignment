@@ -163,3 +163,27 @@ h3 {
 .read {
   font-weight: bolder;
 }
+
+
+/* Appointment View */
+
+.appointment_view {
+  display: grid;
+  grid-template-columns: 60vw;
+  grid-auto-flow: row;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  margin: 5rem auto;
+  text-align: center;
+  
+  .form-group {
+    font-size: larger;
+    font-weight: bold;
+
+    select, input {
+      font-size: large;
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+}

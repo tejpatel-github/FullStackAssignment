@@ -54,8 +54,7 @@
                                     <label for="makeCar">Make</label>
                                 </div>
                                 <div class="col">
-                                    <input type="text" id="makeCar" name="make" class="form-control"
-                                        placeholder="Make">
+                                    <input type="text" id="makeCar" name="make" class="form-control" placeholder="Make">
                                 </div>
                             </div>
                             <div class="row">
@@ -86,6 +85,39 @@
                                 </div>
                             </div>
                         </div>
+                        <section>Book Appointment</section>
+                        <div class="row">
+                            <div class="col label">
+                                <label for="appointmentDate">Appointment Date</label>
+                            </div>
+                            <div class="col">
+                                <input type="date" id="appointmentDate" name="appointmentDate"
+                                    onchange="fetchAvailableSlots()" class="form-control"
+                                    placeholder="Appointment Date">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col label">
+                                <label for="appointmentTime">Appointment Time</label>
+                            </div>
+                            <div class="col">
+                                <select name="appointmentTime" id="appointmentTime" class="col-lg-6">
+                                    <option value="9:00AM">9:00AM</option>
+                                    <option value="9:30AM">9:30AM</option>
+                                    <option value="10:00AM">10:00AM</option>
+                                    <option value="10:30AM">10:30AM</option>
+                                    <option value="11:00AM">11:00AM</option>
+                                    <option value="11:30AM">11:30AM</option>
+                                    <option value="12:00PM">12:00PM</option>
+                                    <option value="12:30PM">12:30PM</option>
+                                    <option value="1:00PM">1:00PM</option>
+                                    <option value="1:30PM">1:30PM</option>
+                                    <option value="2:00PM">2:00PM</option>
+                                    <option value="2:30PM">2:30PM</option>
+                                    <option value="3:00PM">3:00PM</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="row">
                             <button type="submit" id="submit" value="submit" class="btn btn-primary">Submit</button>
                         </div>
@@ -94,7 +126,9 @@
             </main>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                crossorigin="anonymous"></script>
+                crossorigin="anonymous">
+                </script>
+
     </body>
 
 </html>
